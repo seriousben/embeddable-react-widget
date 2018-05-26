@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "semi": [2, "never"],
+    "no-underscore-dangle": 0
+  },
+  "plugins": ["react"],
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
