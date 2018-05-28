@@ -11,13 +11,14 @@ The create-react-app of embeddable widgets.
 * Full ES6/ES2015 support (with Babel)
 * Package fonts, css, json, javascripts together into one simple repository (with Webpack)
 * No css tyling conflicts between the host page and the widget (with https://github.com/premasagar/cleanslate)
+* User theming of widget
 * Obfuscating of the widget code
 
-## What is an emeddable widget?
+## What is an embeddable widget?
 
 * Usable using a simple `<script>` tag
 * Configurable with code
-
+* Themable
 
 ## Why not in an iframe?
 
@@ -26,12 +27,14 @@ The create-react-app of embeddable widgets.
 * iframe and content resizing is impossible
 * iframe sandboxing can result in missing functionalities
 
-
 ## Roadmap
 
-- [ ] index.html works (webpack, babel, react)
-- [ ] webpack changed to output a library
-- [ ] react widget
+- [x] Widget as react app - index.html works (webpack, babel, react)
+- [ ] React widget (widget builder)
+- [ ] Webpack changed to output a library
+- [ ] Theming support
+- [ ] Obfuscation
+- [ ] Storyboard and docs
 
 # Links
 * https://github.com/premasagar/cleanslate
