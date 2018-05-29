@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
 import './widget.scss';
 
-class Widget extends React.Component {
+class Widget extends Component {
   state = {
     opened: false,
     showDock: true,
@@ -11,7 +11,7 @@ class Widget extends React.Component {
 
   handleToggleOpen = () => {
     this.setState((prev) => {
-      let showDock = prev.showDock;
+      let { showDock } = prev;
       if (!prev.opened) {
         showDock = false;
       }
@@ -36,16 +36,17 @@ class Widget extends React.Component {
         </a>
       );
     }
-    return "";
+    return '';
   }
 
   render() {
-    let body = this.renderBody();
+    const body = this.renderBody();
 
     return (
+
       <div className="docked-widget">
         <Transition in={this.state.opened} timeout={250} onExited={this.handleWidgetExit}>
-          {(status) => (
+          {status => (
             <div className={`widget widget-${status}`}>
               <div className="widget-header">
                 <div className="widget-header-title">

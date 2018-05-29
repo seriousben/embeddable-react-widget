@@ -10,14 +10,14 @@ module.exports = {
       // both options are optional
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-    })
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
       },
       {
         test: /\.scss$/,
@@ -25,23 +25,26 @@ module.exports = {
           // fallback to style-loader in development
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   entry: [
-    './src/index.js'
+    './src/index.js',
   ],
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'embeddable-widget.js',
+    library: 'EmbeddableWidget',
+    libraryExport: 'default',
+    libraryTarget: 'window',
   },
   serve: {
-    content: './dist'
-  }
+    content: ['./dist', './public'],
+  },
 };

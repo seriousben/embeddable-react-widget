@@ -6,8 +6,8 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "rules": {
-    "semi": [2, "never"],
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "plugins": ["react"],
   "settings": {
