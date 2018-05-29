@@ -32,6 +32,9 @@ The create-react-app of embeddable widgets.
 - [x] Widget as react app - index.html works (webpack, babel, react)
 - [ ] React widget (widget builder)
 - [ ] Webpack changed to output a library
+- [ ] Add tests
+- [ ] Add greenkeeper
+- [ ] Integrate eslint with webpack
 - [ ] Theming support
 - [ ] Obfuscation
 - [ ] Storyboard and docs
