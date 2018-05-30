@@ -9,5 +9,8 @@ jobs:
           name: dep install
           command: npm install
       - run:
+          name: install codecov
+          command: npm install -g codecov
+      - run:
           name: test
-          command: npm test
+          command: npm test && codecov
