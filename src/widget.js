@@ -43,7 +43,6 @@ class Widget extends Component {
     const body = this.renderBody();
 
     return (
-
       <div className="docked-widget">
         <Transition in={this.state.opened} timeout={250} onExited={this.handleWidgetExit}>
           {status => (
