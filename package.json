@@ -25,6 +25,9 @@
       "<rootDir>/jest/setup.js"
     ]
   },
+  "serve": {
+    "content": ["./dist", "./public"]
+  },
   "author": "seriousben https://github.com/seriousben",
   "license": "MIT",
   "devDependencies": {
