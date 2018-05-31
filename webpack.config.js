@@ -43,8 +43,5 @@ module.exports = {
     library: 'EmbeddableWidget',
     libraryExport: 'default',
     libraryTarget: 'window',
-  },
-  serve: {
-    content: ['./dist', './public'],
-  },
+  }
 };

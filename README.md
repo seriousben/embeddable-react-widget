@@ -36,6 +36,9 @@ The create-react-app of embeddable widgets.
 - [x] React widget (widget builder)
 - [x] Webpack changed to output a library
 - [x] Add tests
+- [x] Production Build
+- [x] Minified
+- [ ] Obfuscation
 - [ ] Add greenkeeper
 - [ ] Integrate eslint with webpack
 - [ ] Theming support
