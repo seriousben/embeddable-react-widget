@@ -12,8 +12,8 @@ The create-react-app of embeddable widgets.
 ## Features
 
 * Full ES6/ES2015 support (with Babel)
-* Package fonts, css, json, javascripts together into one simple repository (with Webpack)
-* No css tyling conflicts between the host page and the widget (with https://github.com/premasagar/cleanslate)
+* Package fonts, css, json, javascripts together into one single package (with Webpack)
+* No css styling conflicts between the host page and the widget (with https://github.com/premasagar/cleanslate)
 * User theming of widget
 * Obfuscating of the widget code
 
@@ -38,11 +38,11 @@ The create-react-app of embeddable widgets.
 - [x] Add tests
 - [x] Production Build
 - [x] Minified
+- [x] Add greenkeeper
+- [ ] Reset / Cleanslate / No-conflicts of styles
 - [ ] Obfuscation
-- [ ] Add greenkeeper
 - [ ] Integrate eslint with webpack
 - [ ] Theming support
-- [ ] Obfuscation
 - [ ] Storyboard and docs
 
 # Links
