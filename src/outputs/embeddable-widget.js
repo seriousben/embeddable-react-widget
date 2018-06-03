@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Widget from './widget';
+import Widget from '../components/widget';
 
 export default class EmbeddableWidget {
   static el;

@@ -2,8 +2,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
-module.exports = {
-  mode: 'development',
+const defaultConfig = {
+  mode: 'production',
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
@@ -33,15 +33,26 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
-  entry: [
-    './src/index.js',
-  ],
+
+};
+
+module.exports = [{
+  ...defaultConfig,
+  entry: './src/outputs/embeddable-widget.js',
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'embeddable-widget.js',
+    filename: 'widget.js',
     library: 'EmbeddableWidget',
     libraryExport: 'default',
     libraryTarget: 'window',
-  }
-};
+  },
+}, {
+  ...defaultConfig,
+  entry: './src/outputs/bookmarklet.js',
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bookmarklet.js',
+  },
+}];

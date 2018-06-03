@@ -1,5 +1,5 @@
-import EmbeddableWidget from './index';
-import { waitForSelection } from './test-helpers';
+import EmbeddableWidget from './embeddable-widget';
+import { waitForSelection } from '../test-helpers';
 
 describe('EmbeddableWidget', () => {
   afterEach(() => {

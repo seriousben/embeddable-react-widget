@@ -4,11 +4,11 @@
   "description": "building an embeddable js widget with react",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-cli",
+    "build": "webpack-cli --mode production",
     "start": "webpack-serve --config ./webpack.config.js --mode development --open",
     "test": "jest",
     "test-update-snapshots": "jest --updateSnapshot",
-    "deploy": "webpack-cli && cp ./public/* ./dist/. && gh-pages -d dist"
+    "deploy": "npm run build && cp ./public/* ./dist/. && gh-pages -d dist"
   },
   "babel": {
     "presets": [
