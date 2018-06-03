@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Widget /> open/close 1`] = `
+<Widget>
+  <div
+    className="docked-widget"
+  >
+    <Transition
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={250}
+      unmountOnExit={false}
+    >
+      <div
+        className="widget widget-exited"
+      >
+        <div
+          className="widget-header"
+        >
+          <div
+            className="widget-header-title"
+          >
+            Header
+          </div>
+          <a
+            className="widget-header-icon"
+            onClick={[Function]}
+          >
+            X
+          </a>
+        </div>
+        <div
+          className="widget-body"
+        >
+          Body
+        </div>
+        <div
+          className="widget-footer"
+        >
+          Footer
+        </div>
+      </div>
+    </Transition>
+    <a
+      className="dock"
+      onClick={[Function]}
+    >
+      ^ OPEN ^
+    </a>
+  </div>
+</Widget>
+`;
+
+exports[`<Widget /> open/close 2`] = `
+<Widget>
+  <div
+    className="docked-widget"
+  >
+    <Transition
+      appear={false}
+      enter={true}
+      exit={true}
+      in={true}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={250}
+      unmountOnExit={false}
+    >
+      <div
+        className="widget widget-entering"
+      >
+        <div
+          className="widget-header"
+        >
+          <div
+            className="widget-header-title"
+          >
+            Header
+          </div>
+          <a
+            className="widget-header-icon"
+            onClick={[Function]}
+          >
+            X
+          </a>
+        </div>
+        <div
+          className="widget-body"
+        >
+          Body
+        </div>
+        <div
+          className="widget-footer"
+        >
+          Footer
+        </div>
+      </div>
+    </Transition>
+  </div>
+</Widget>
+`;
+
+exports[`<Widget /> open/close 3`] = `
+<Widget>
+  <div
+    className="docked-widget"
+  >
+    <Transition
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={250}
+      unmountOnExit={false}
+    >
+      <div
+        className="widget widget-exited"
+      >
+        <div
+          className="widget-header"
+        >
+          <div
+            className="widget-header-title"
+          >
+            Header
+          </div>
+          <a
+            className="widget-header-icon"
+            onClick={[Function]}
+          >
+            X
+          </a>
+        </div>
+        <div
+          className="widget-body"
+        >
+          Body
+        </div>
+        <div
+          className="widget-footer"
+        >
+          Footer
+        </div>
+      </div>
+    </Transition>
+    <a
+      className="dock"
+      onClick={[Function]}
+    >
+      ^ OPEN ^
+    </a>
+  </div>
+</Widget>
+`;

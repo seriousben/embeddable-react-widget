@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-serve --config ./webpack.config.js --mode development --open",
-    "test": "jest"
+    "test": "jest",
+    "test-update-snapshots": "jest --updateSnapshot"
   },
   "babel": {
     "presets": [
@@ -17,6 +18,13 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js?(x)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test-helpers/"
+    ],
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.(css|scss)$": "<rootDir>/jest/cssTransform.js",
@@ -24,10 +32,16 @@
     },
     "setupFiles": [
       "<rootDir>/jest/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "serve": {
-    "content": ["./dist", "./public"]
+    "content": [
+      "./dist",
+      "./public"
+    ]
   },
   "author": "seriousben https://github.com/seriousben",
   "license": "MIT",
@@ -41,6 +55,7 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-import-resolver-webpack": "^0.10.0",
