@@ -1,7 +1,8 @@
 # Embeddable React Widget
 
-[![CircleCI](https://circleci.com/gh/seriousben/embeddable-react-widget.svg?style=svg)](https://circleci.com/gh/seriousben/embeddable-react-widget)
-[![codecov](https://codecov.io/gh/seriousben/embeddable-react-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/seriousben/embeddable-react-widget) [![Greenkeeper badge](https://badges.greenkeeper.io/seriousben/embeddable-react-widget.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/seriousben/embeddable-react-widget.svg?style=shield)](https://circleci.com/gh/seriousben/embeddable-react-widget)
+[![codecov](https://codecov.io/gh/seriousben/embeddable-react-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/seriousben/embeddable-react-widget)
+[![Greenkeeper badge](https://badges.greenkeeper.io/seriousben/embeddable-react-widget.svg)](https://greenkeeper.io/)
 
 Easy creation of an embeddable widget.
 
