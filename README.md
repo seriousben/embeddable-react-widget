@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/seriousben/embeddable-react-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/seriousben/embeddable-react-widget)
 [![Greenkeeper badge](https://badges.greenkeeper.io/seriousben/embeddable-react-widget.svg)](https://greenkeeper.io/)
 
-Easy creation of an embeddable widget.
+Easy creation of an embeddable widget. - https://seriousben.github.io/embeddable-react-widget
 
 ## Features
 
