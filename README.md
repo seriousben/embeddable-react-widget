@@ -6,10 +6,6 @@
 
 Easy creation of an embeddable widget.
 
-## Goal
-
-The create-react-app of embeddable widgets.
-
 ## Features
 
 * Full ES6/ES2015 support (with Babel)
@@ -17,19 +13,35 @@ The create-react-app of embeddable widgets.
 * No css styling conflicts between the host page and the widget (with https://github.com/premasagar/cleanslate)
 * User theming of widget
 * Obfuscating of the widget code
+* Unit Tested with code coverage enabled
+* Continuous Integration ready
 
-## What is an embeddable widget?
+## Running the widget
 
-* Usable using a simple `<script>` tag
-* Configurable with code
-* Themable
+### Install dependencies
 
-## Why not in an iframe?
+```sh
+$ npm install
+```
 
-* Interaction between the frame and the hosting page is tricky and not recommended
-* You can only display content within the iframe
-* iframe and content resizing is impossible
-* iframe sandboxing can result in missing functionalities
+### Start the development server
+
+```sh
+$ npm start
+... server running at http://localhost:8080/
+```
+
+### Run tests
+```
+$ npm test
+... test output
+```
+
+### Production build
+```
+$ npm run build
+... create files in /dist
+```
 
 ## Roadmap
 
@@ -37,6 +49,8 @@ The create-react-app of embeddable widgets.
 - [x] React widget (widget builder)
 - [x] Webpack changed to output a library
 - [x] Add tests
+- [x] Add circleci integration
+- [x] Add codecov integration for codecoverage
 - [x] Production Build
 - [x] Minified
 - [x] Add greenkeeper
@@ -46,7 +60,28 @@ The create-react-app of embeddable widgets.
 - [ ] Theming support
 - [ ] Storyboard and docs
 
-# Links
+## Background
+
+### What is an embeddable widget?
+
+* Usable using a simple `<script>` tag
+* Configurable with code
+* Themable
+
+### Why not in an iframe?
+
+* Interaction between the frame and the hosting page is tricky and not recommended
+* You can only display content within the iframe
+* iframe and content resizing is impossible
+* iframe sandboxing can result in missing functionalities
+
+### Read more
+
+Read more about about widgets, react and scoping of css.
+
+* https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#hot-module-replacement
+* https://codeburst.io/building-react-widget-libraries-using-webpack-e0a140c16ce4
+* https://github.com/timarney/react-app-rewired
 * https://github.com/premasagar/cleanslate
 * https://github.com/krasimir/third-party-react-widget
 * https://github.com/jenyayel/js-widget
@@ -62,8 +97,3 @@ The create-react-app of embeddable widgets.
 * https://github.com/javascript-obfuscator/webpack-obfuscator
 * https://github.com/tsileo/embedded-js-widget
 * https://thomassileo.name/blog/2014/03/27/building-an-embeddable-javascript-widget-third-party-javascript/
-
-## Best
-* https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#hot-module-replacement
-* https://codeburst.io/building-react-widget-libraries-using-webpack-e0a140c16ce4
-* https://github.com/timarney/react-app-rewired
