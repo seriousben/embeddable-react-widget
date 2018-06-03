@@ -11,6 +11,7 @@ Easy creation of an embeddable widget. - https://seriousben.github.io/embeddable
 * Full ES6/ES2015 support (with Babel)
 * Package fonts, css, json, javascripts together into one single package (with Webpack)
 * No css styling conflicts between the host page and the widget (with https://github.com/premasagar/cleanslate)
+* Bookmarklet supported for fast testing and demonstration
 * User theming of widget
 * Obfuscating of the widget code
 * Unit Tested with code coverage enabled
@@ -54,6 +55,7 @@ $ npm run build
 - [x] Production Build
 - [x] Minified
 - [x] Add greenkeeper
+- [x] Bookmarklet
 - [ ] Reset / Cleanslate / No-conflicts of styles
 - [ ] Obfuscation
 - [ ] Integrate eslint with webpack
