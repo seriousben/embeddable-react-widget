@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Widget from './widget';
-import { waitForSelection } from './test-helpers';
+import { waitForSelection } from '../test-helpers';
 
 describe('<Widget />', () => {
   test('open/close', async () => {
