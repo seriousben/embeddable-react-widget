@@ -4,10 +4,11 @@
   "description": "building an embeddable js widget with react",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack-cli",
     "start": "webpack-serve --config ./webpack.config.js --mode development --open",
     "test": "jest",
-    "test-update-snapshots": "jest --updateSnapshot"
+    "test-update-snapshots": "jest --updateSnapshot",
+    "deploy": "webpack-cli && cp ./public/* ./dist/. && gh-pages -d dist"
   },
   "babel": {
     "presets": [
@@ -62,6 +63,7 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^1.2.0",
     "jest": "^23.0.1",
     "jest-cli": "^23.0.1",
     "mini-css-extract-plugin": "^0.4.0",
