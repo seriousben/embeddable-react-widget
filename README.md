@@ -56,11 +56,11 @@ $ npm run build
 - [x] Minified
 - [x] Add greenkeeper
 - [x] Bookmarklet
-- [ ] Reset / Cleanslate / No-conflicts of styles
-- [ ] Obfuscation
-- [ ] Integrate eslint with webpack
+- [x] Reset / Cleanslate / No-conflicts of styles
+- [x] Obfuscation
 - [ ] Theming support
 - [ ] Storyboard and docs
+- [ ] Integrate eslint with webpack
 
 ## Background
 

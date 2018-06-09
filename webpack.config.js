@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const increaseSpecificity = require('postcss-increase-specificity');
+const JavaScriptObfuscator = require('webpack-obfuscator');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -14,7 +15,8 @@ const defaultConfig = {
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
-  ],
+    devMode ? null : new JavaScriptObfuscator(),
+  ].filter(i => i),
   module: {
     rules: [
       {
@@ -26,7 +28,8 @@ const defaultConfig = {
         test: /\.(scss|css)$/,
         use: [
           // fallback to style-loader in development
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'cssimportant-loader',
           {
