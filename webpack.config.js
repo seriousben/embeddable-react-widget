@@ -1,10 +1,13 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const increaseSpecificity = require('postcss-increase-specificity');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
 const defaultConfig = {
   mode: 'production',
   plugins: [
+    new CleanWebpackPlugin(['dist/']),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
@@ -20,11 +23,25 @@ const defaultConfig = {
         use: ['babel-loader'],
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           // fallback to style-loader in development
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
+          'cssimportant-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                increaseSpecificity({
+                  stackableRoot: '.cleanslate',
+                  repeat: 1,
+                }),
+              ],
+              sourceMap: devMode,
+            },
+          },
           'sass-loader',
         ],
       },

@@ -21,7 +21,6 @@ describe('EmbeddableWidget', () => {
     await waitForSelection(document, 'div');
   });
 
-
   test('#mount twice', async () => {
     EmbeddableWidget.mount();
     expect(() => EmbeddableWidget.mount()).toThrow('already mounted');

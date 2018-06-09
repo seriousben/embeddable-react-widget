@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Widget from '../components/widget';
+import '../../vendor/cleanslate.css';
 
 export default class EmbeddableWidget {
   static el;
@@ -13,6 +14,7 @@ export default class EmbeddableWidget {
         throw new Error('EmbeddableWidget is already mounted, unmount first');
       }
       const el = document.createElement('div');
+      el.setAttribute('class', 'cleanslate');
       document.body.appendChild(el);
       ReactDOM.render(
         component,
