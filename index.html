@@ -14,7 +14,6 @@
        var bookmarklet = "var s= document.createElement('script'); s.setAttribute('src', '"+window.location.href+"bookmarklet.js'); s.setAttribute('crossorigin', 'anonymous'); document.body.appendChild(s);"
        bookmarklet = '(function(){'+ bookmarklet +'})();'
        document.querySelector('a#bookmarklet').setAttribute("href", "javascript:" + encodeURIComponent(bookmarklet));
-       console.log("DONE");
       </script>
     </ul>
   </body>
