@@ -76,7 +76,7 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.0.1",
-    "webpack-obfuscator": "^0.16.0",
+    "webpack-obfuscator": "^0.17.0",
     "webpack-serve": "^1.0.2"
   },
   "dependencies": {
