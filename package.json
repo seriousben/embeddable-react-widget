@@ -51,7 +51,7 @@
     "babel-eslint": "^8.2.3",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
-    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-airbnb": "^3.0.0",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
