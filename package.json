@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-dom": "^16.8.5",
     "react-transition-group": "^2.5.2"
   }
