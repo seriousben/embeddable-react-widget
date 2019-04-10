@@ -68,7 +68,7 @@
     "gh-pages": "^2.0.1",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
-    "mini-css-extract-plugin": "^0.5.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.11.0",
     "postcss-increase-specificity": "^0.6.0",
     "postcss-loader": "^3.0.0",
