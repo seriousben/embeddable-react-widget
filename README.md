@@ -22,7 +22,7 @@ Easy creation of embeddable widgets - https://seriousben.github.io/embeddable-re
 
 ## Demo
 
-<img src="./bookmarklet-flow.gif" />
+<img width="600px" src="./bookmarklet-flow.gif" />
 
 ## Running the widget
 
