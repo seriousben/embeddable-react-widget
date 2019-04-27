@@ -1,10 +1,13 @@
-# Embeddable React Widget
+<div align="center">
+<h1>Embeddable React Widget</h1>
+
+Easy creation of embeddable widgets - https://seriousben.github.io/embeddable-react-widget
 
 [![CircleCI](https://circleci.com/gh/seriousben/embeddable-react-widget.svg?style=shield)](https://circleci.com/gh/seriousben/embeddable-react-widget)
 [![codecov](https://codecov.io/gh/seriousben/embeddable-react-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/seriousben/embeddable-react-widget)
-[![Greenkeeper badge](https://badges.greenkeeper.io/seriousben/embeddable-react-widget.svg)](https://greenkeeper.io/)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-Easy creation of an embeddable widget. - https://seriousben.github.io/embeddable-react-widget
+</div>
 
 ## Features
 
@@ -16,6 +19,10 @@ Easy creation of an embeddable widget. - https://seriousben.github.io/embeddable
 * Obfuscating of the widget code
 * Unit Tested with code coverage enabled
 * Continuous Integration ready
+
+## Demo
+
+<img src="./bookmarklet-flow.gif" />
 
 ## Running the widget
 
