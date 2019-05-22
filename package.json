@@ -74,7 +74,7 @@
     "postcss-loader": "3.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
-    "webpack": "4.32.0",
+    "webpack": "4.32.1",
     "webpack-cli": "3.3.2",
     "webpack-obfuscator": "0.18.0",
     "webpack-serve": "3.1.0"
