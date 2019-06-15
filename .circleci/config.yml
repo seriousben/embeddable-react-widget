@@ -23,6 +23,13 @@ jobs:
             [ -f ./dist/widget.js ] || exit 1
             [ -f ./dist/bookmarklet.js ] || exit 1
       - run:
+          name: npm start works
+          command: |
+            npm run start &
+            pid=$!
+            sleep 10s
+            ps $pid
+      - run:
           name: deploy
           command: |
             if [ "$CIRCLE_BRANCH" = "master" ]; then
@@ -35,7 +42,10 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
       - deploy:
           requires:
             - build
