@@ -2,19 +2,31 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const increaseSpecificity = require('postcss-increase-specificity');
 const JavaScriptObfuscator = require('webpack-obfuscator');
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
+const publicDir = path.join(__dirname, 'public');
+const distDir = path.join(__dirname, 'dist');
+
 const defaultConfig = {
-  mode: 'production',
+  mode: process.env.NODE_ENV || 'development',
+  devServer: {
+    contentBase: publicDir,
+    port: 9000
+  },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin({protectWebpackAssets: false}),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
+    new CopyPlugin([
+      { from: 'public', to: '.' },
+    ]),
     devMode ? null : new JavaScriptObfuscator(),
   ].filter(i => i),
   module: {
@@ -53,14 +65,13 @@ const defaultConfig = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
-
 };
 
 module.exports = [{
   ...defaultConfig,
   entry: './src/outputs/embeddable-widget.js',
   output: {
-    path: __dirname + '/dist',
+    path: distDir,
     publicPath: '/',
     filename: 'widget.js',
     library: 'EmbeddableWidget',
@@ -71,7 +82,7 @@ module.exports = [{
   ...defaultConfig,
   entry: './src/outputs/bookmarklet.js',
   output: {
-    path: __dirname + '/dist',
+    path: distDir,
     publicPath: '/',
     filename: 'bookmarklet.js',
   },

@@ -14,3 +14,29 @@ jobs:
       - run:
           name: test
           command: npm test && codecov
+      - run:
+          name: build
+          command: |
+            npm run build
+            [ -f ./dist/index.html ] || exit 1
+            [ -f ./dist/blank.html ] || exit 1
+            [ -f ./dist/widget.js ] || exit 1
+            [ -f ./dist/bookmarklet.js ] || exit 1
+      - run:
+          name: deploy
+          command: |
+            if [ "$CIRCLE_BRANCH" = "master" ]; then
+              npm run deploy
+            fi
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

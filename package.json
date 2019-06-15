@@ -5,15 +5,30 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack-cli --mode production",
-    "start": "webpack-serve --config ./webpack.config.js --mode development --open",
+    "start": "webpack-dev-server",
     "test": "jest",
     "test-update-snapshots": "jest --updateSnapshot",
-    "deploy": "npm run build && cp ./public/* ./dist/. && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "babel": {
     "presets": [
-      "airbnb",
-      "stage-2"
+      "airbnb"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-json-strings",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      "@babel/plugin-proposal-function-sent",
+      "@babel/plugin-proposal-export-namespace-from",
+      "@babel/plugin-proposal-numeric-separator",
+      "@babel/plugin-proposal-throw-expressions"
     ]
   },
   "jest": {
@@ -47,13 +62,23 @@
   "author": "seriousben https://github.com/seriousben",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "6.26.3",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
-    "babel-jest": "23.6.0",
+    "babel-jest": "^23.4.2",
     "babel-loader": "8.0.6",
-    "babel-preset-airbnb": "2.6.0",
-    "babel-preset-stage-2": "6.24.1",
+    "babel-preset-airbnb": "^3.2.1",
     "clean-webpack-plugin": "2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "2.1.1",
     "cssimportant-loader": "0.4.0",
     "enzyme": "3.9.0",
@@ -66,16 +91,17 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.13.0",
     "gh-pages": "2.0.1",
-    "jest": "23.6.0",
-    "jest-cli": "23.6.0",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
     "mini-css-extract-plugin": "0.6.0",
     "node-sass": "4.12.0",
     "postcss-increase-specificity": "0.6.0",
     "postcss-loader": "3.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
-    "webpack": "4.32.2",
-    "webpack-cli": "3.3.2",
+    "webpack": "4.32.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
     "webpack-obfuscator": "0.18.0",
     "webpack-serve": "3.1.0"
   },
