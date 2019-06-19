@@ -6,8 +6,8 @@ import '../../vendor/cleanslate.css';
 export default class EmbeddableWidget {
   static el;
 
-  static mount(params=null) {
-    const component = <Widget params={params}/>;
+  static mount({parent, ...params} = {}) {
+    const component = <Widget {...params}/>
 
     function doRender() {
       if (EmbeddableWidget.el) {
@@ -15,8 +15,8 @@ export default class EmbeddableWidget {
       }
       const el = document.createElement('div');
       el.setAttribute('class', 'cleanslate');
-      if (params && params.parent) {
-        document.querySelector(params.parent).appendChild(el);
+      if (parent) {
+        document.querySelector(parent).appendChild(el);
       }else{
         document.body.appendChild(el);
       }
