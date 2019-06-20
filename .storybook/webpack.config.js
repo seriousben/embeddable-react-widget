@@ -1,7 +1,13 @@
-const path = require('path')
-const custom = require('../webpack.config.js')
+const path = require('path');
 
-module.exports = async ({ config, mode }) => {
-
-  return { ...config, module: { ...config.module, rules: custom[0].module.rules } };
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.resolve(__dirname, '../'),
+      },
+    ],
+  },
 }
