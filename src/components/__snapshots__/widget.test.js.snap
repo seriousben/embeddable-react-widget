@@ -31,12 +31,14 @@ exports[`<Widget /> open/close 1`] = `
           >
             Header
           </div>
-          <a
+          <button
             className="widget-header-icon"
             onClick={[Function]}
+            onKeyPress={[Function]}
+            type="button"
           >
             X
-          </a>
+          </button>
         </div>
         <div
           className="widget-body"
@@ -50,12 +52,14 @@ exports[`<Widget /> open/close 1`] = `
         </div>
       </div>
     </Transition>
-    <a
+    <button
       className="dock"
       onClick={[Function]}
+      onKeyPress={[Function]}
+      type="button"
     >
       ^ OPEN ^
-    </a>
+    </button>
   </div>
 </Widget>
 `;
@@ -91,12 +95,14 @@ exports[`<Widget /> open/close 2`] = `
           >
             Header
           </div>
-          <a
+          <button
             className="widget-header-icon"
             onClick={[Function]}
+            onKeyPress={[Function]}
+            type="button"
           >
             X
-          </a>
+          </button>
         </div>
         <div
           className="widget-body"
@@ -145,12 +151,14 @@ exports[`<Widget /> open/close 3`] = `
           >
             Header
           </div>
-          <a
+          <button
             className="widget-header-icon"
             onClick={[Function]}
+            onKeyPress={[Function]}
+            type="button"
           >
             X
-          </a>
+          </button>
         </div>
         <div
           className="widget-body"
@@ -164,12 +172,14 @@ exports[`<Widget /> open/close 3`] = `
         </div>
       </div>
     </Transition>
-    <a
+    <button
       className="dock"
       onClick={[Function]}
+      onKeyPress={[Function]}
+      type="button"
     >
       ^ OPEN ^
-    </a>
+    </button>
   </div>
 </Widget>
 `;

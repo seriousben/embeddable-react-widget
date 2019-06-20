@@ -37,6 +37,11 @@ const defaultConfig = {
         use: ['babel-loader'],
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['eslint-loader']
+      },      
+      {
         test: /\.(scss|css)$/,
         use: [
           // fallback to style-loader in development
