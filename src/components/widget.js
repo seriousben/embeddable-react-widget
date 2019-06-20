@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
 import './widget.scss';
 
@@ -47,6 +48,7 @@ class Widget extends Component {
   render() {
     const { opened } = this.state;
     const body = this.renderBody();
+    const { bodyText, headerText, footerText } = this.props;
 
     return (
       <div className="docked-widget">
@@ -55,7 +57,7 @@ class Widget extends Component {
             <div className={`widget widget-${status}`}>
               <div className="widget-header">
                 <div className="widget-header-title">
-                  Header
+                  {headerText}
                 </div>
                 <button
                   type="button"
@@ -67,10 +69,10 @@ class Widget extends Component {
                 </button>
               </div>
               <div className="widget-body">
-                Body
+                {bodyText}
               </div>
               <div className="widget-footer">
-                Footer
+                {footerText}
               </div>
             </div>
           )}
@@ -80,5 +82,17 @@ class Widget extends Component {
     );
   }
 }
+
+Widget.propTypes = {
+  headerText: PropTypes.string,
+  bodyText: PropTypes.string,
+  footerText: PropTypes.string,
+};
+
+Widget.defaultProps = {
+  headerText: 'Header',
+  bodyText: 'Body',
+  footerText: 'Footer',
+};
 
 export default Widget;

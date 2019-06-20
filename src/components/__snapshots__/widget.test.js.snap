@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Widget /> open/close 1`] = `
-<Widget>
+<Widget
+  bodyText="Body"
+  footerText="Footer"
+  headerText="Header"
+>
   <div
     className="docked-widget"
   >
@@ -65,7 +69,11 @@ exports[`<Widget /> open/close 1`] = `
 `;
 
 exports[`<Widget /> open/close 2`] = `
-<Widget>
+<Widget
+  bodyText="Body"
+  footerText="Footer"
+  headerText="Header"
+>
   <div
     className="docked-widget"
   >
@@ -121,7 +129,11 @@ exports[`<Widget /> open/close 2`] = `
 `;
 
 exports[`<Widget /> open/close 3`] = `
-<Widget>
+<Widget
+  bodyText="Body"
+  footerText="Footer"
+  headerText="Header"
+>
   <div
     className="docked-widget"
   >

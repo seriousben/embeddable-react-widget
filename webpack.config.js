@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const increaseSpecificity = require('postcss-increase-specificity');
 const JavaScriptObfuscator = require('webpack-obfuscator');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -14,7 +13,7 @@ const defaultConfig = {
   mode: process.env.NODE_ENV || 'development',
   devServer: {
     contentBase: publicDir,
-    port: 9000
+    port: 9000,
   },
   plugins: [
     // new CleanWebpackPlugin({protectWebpackAssets: false}),
@@ -39,8 +38,11 @@ const defaultConfig = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['eslint-loader']
-      },      
+        loader: 'eslint-loader',
+        options: {
+          emitWarning: true,
+        },
+      },
       {
         test: /\.(scss|css)$/,
         use: [
