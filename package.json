@@ -8,7 +8,9 @@
     "start": "webpack-dev-server",
     "test": "jest",
     "test-update-snapshots": "jest --updateSnapshot",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "babel": {
     "presets": [
@@ -72,6 +74,10 @@
     "@babel/plugin-proposal-throw-expressions": "7.2.0",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.2",
     "babel-jest": "24.8.0",
