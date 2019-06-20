@@ -19,6 +19,18 @@ describe('EmbeddableWidget', () => {
   test('#mount document complete', async () => {
     EmbeddableWidget.mount();
     await waitForSelection(document, 'div');
+  })
+
+  test('#mount to document element', async () => {
+    
+    const newDiv = document.createElement(`div`)
+    newDiv.setAttribute(`id`, `widget-mount`)
+    
+    EmbeddableWidget.mount({
+      parentElement: `#widget-mount`
+    })
+    
+    await waitForSelection(document, 'div');
   });
 
   test('#mount twice', async () => {
