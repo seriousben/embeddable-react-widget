@@ -25,11 +25,12 @@ describe('EmbeddableWidget', () => {
     
     const newDiv = document.createElement(`div`)
     newDiv.setAttribute(`id`, `widget-mount`)
+    document.body.appendChild(newDiv);
     
     EmbeddableWidget.mount({
       parentElement: `#widget-mount`
     })
-    
+
     await waitForSelection(document, 'div');
   });
 
