@@ -10,7 +10,7 @@
     "test-update-snapshots": "jest --updateSnapshot",
     "deploy": "npm run build && gh-pages -d dist",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
     "lint": "./node_modules/.bin/eslint ."
   },
   "babel": {
