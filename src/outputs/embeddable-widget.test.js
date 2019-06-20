@@ -23,9 +23,9 @@ describe('EmbeddableWidget', () => {
 
   test('#mount to document element', async () => {
     
-    const newDiv = document.createElement(`div`)
-    newDiv.setAttribute(`id`, `widget-mount`)
-    document.body.appendChild(newDiv);
+    const newElement = document.createElement(`span`)
+    newElement.setAttribute(`id`, `widget-mount`)
+    document.body.appendChild(newElement);
     
     EmbeddableWidget.mount({
       parentElement: `#widget-mount`
@@ -34,8 +34,6 @@ describe('EmbeddableWidget', () => {
     await waitForSelection(document, 'div')
 
     expect(document.querySelectorAll('#widget-mount')).toHaveLength(1);
-
-    EmbeddableWidget.unmount();
   });
 
   test('#mount twice', async () => {
