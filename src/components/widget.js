@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
 import './widget.scss';
 
@@ -29,31 +28,43 @@ class Widget extends Component {
   }
 
   renderBody = () => {
-    if (this.state.showDock) {
-      return (
-        <a className="dock" onClick={this.handleToggleOpen}>
-          ^ OPEN ^
-        </a>
-      );
-    }
-    return '';
+    const { showDock } = this.state;
+
+    if (!showDock) return '';
+
+    return (
+      <button
+        type="button"
+        className="dock"
+        onClick={this.handleToggleOpen}
+        onKeyPress={this.handleToggleOpen}
+      >
+        ^ OPEN ^
+      </button>
+    );
   }
 
   render() {
+    const { opened } = this.state;
     const body = this.renderBody();
 
     return (
       <div className="docked-widget">
-        <Transition in={this.state.opened} timeout={250} onExited={this.handleWidgetExit}>
+        <Transition in={opened} timeout={250} onExited={this.handleWidgetExit}>
           {status => (
             <div className={`widget widget-${status}`}>
               <div className="widget-header">
                 <div className="widget-header-title">
                   Header
                 </div>
-                <a className="widget-header-icon" onClick={this.handleToggleOpen}>
+                <button
+                  type="button"
+                  className="widget-header-icon"
+                  onClick={this.handleToggleOpen}
+                  onKeyPress={this.handleToggleOpen}
+                >
                   X
-                </a>
+                </button>
               </div>
               <div className="widget-body">
                 Body
@@ -69,7 +80,5 @@ class Widget extends Component {
     );
   }
 }
-
-Widget.propTypes = {};
 
 export default Widget;
