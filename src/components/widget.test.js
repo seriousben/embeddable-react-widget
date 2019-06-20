@@ -28,10 +28,9 @@ describe('<Widget />', () => {
 
     {
       const dockAnchorEl = await waitForSelection(widgetDom, 'button.dock');
-     expect(dockAnchorEl).toHaveLength(1);
+      expect(dockAnchorEl).toHaveLength(1);
     }
 
     expect(widgetDom).toMatchSnapshot();
   });
-
 });

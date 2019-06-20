@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "test": "jest",
     "test-update-snapshots": "jest --updateSnapshot",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "babel": {
     "presets": [

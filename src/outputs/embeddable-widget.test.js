@@ -19,19 +19,18 @@ describe('EmbeddableWidget', () => {
   test('#mount document complete', async () => {
     EmbeddableWidget.mount();
     await waitForSelection(document, 'div');
-  })
+  });
 
   test('#mount to document element', async () => {
-    
-    const newElement = document.createElement(`span`)
-    newElement.setAttribute(`id`, `widget-mount`)
+    const newElement = document.createElement('span');
+    newElement.setAttribute('id', 'widget-mount');
     document.body.appendChild(newElement);
-    
-    EmbeddableWidget.mount({
-      parentElement: `#widget-mount`
-    })
 
-    await waitForSelection(document, 'div')
+    EmbeddableWidget.mount({
+      parentElement: '#widget-mount',
+    });
+
+    await waitForSelection(document, 'div');
 
     expect(document.querySelectorAll('#widget-mount')).toHaveLength(1);
   });

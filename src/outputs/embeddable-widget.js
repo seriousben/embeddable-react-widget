@@ -18,7 +18,7 @@ export default class EmbeddableWidget {
 
       if (parentElement) {
         document.querySelector(parentElement).appendChild(el);
-      } else{
+      } else {
         document.body.appendChild(el);
       }
       ReactDOM.render(

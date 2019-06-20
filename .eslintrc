@@ -7,7 +7,10 @@
   "extends": "airbnb",
   "rules": {
     "no-underscore-dangle": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/prefer-default-export": 1,
+    "import/no-extraneous-dependencies": 1,
+    "no-await-in-loop": 1
   },
   "plugins": ["react"],
   "settings": {
