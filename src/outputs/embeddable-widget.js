@@ -6,8 +6,8 @@ import '../../vendor/cleanslate.css';
 export default class EmbeddableWidget {
   static el;
 
-  static mount() {
-    const component = <Widget />;
+  static mount(props = {}) {
+    const component = <Widget {...props} />;
 
     function doRender() {
       if (EmbeddableWidget.el) {

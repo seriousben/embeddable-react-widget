@@ -41,6 +41,7 @@ class Widget extends Component {
 
   render() {
     const body = this.renderBody();
+    const { bodyText, headerText, footerText } = this.props
 
     return (
       <div className="docked-widget">
@@ -49,17 +50,17 @@ class Widget extends Component {
             <div className={`widget widget-${status}`}>
               <div className="widget-header">
                 <div className="widget-header-title">
-                  Header
+                  {headerText}
                 </div>
                 <a className="widget-header-icon" onClick={this.handleToggleOpen}>
                   X
                 </a>
               </div>
               <div className="widget-body">
-                Body
+                {bodyText}
               </div>
               <div className="widget-footer">
-                Footer
+                {footerText}
               </div>
             </div>
           )}
@@ -70,6 +71,16 @@ class Widget extends Component {
   }
 }
 
-Widget.propTypes = {};
+Widget.propTypes = {
+  headerText: PropTypes.string,
+  bodyText: PropTypes.string,
+  footerText: PropTypes.string
+}
+
+Widget.defaultProps = {
+  headerText: `Header`,
+  bodyText: `Body`,
+  footerText: `Footer`,
+}
 
 export default Widget;
