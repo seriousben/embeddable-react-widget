@@ -31,7 +31,11 @@ describe('EmbeddableWidget', () => {
       parentElement: `#widget-mount`
     })
 
-    await waitForSelection(document, 'div');
+    await waitForSelection(document, 'div')
+
+    expect(document.querySelectorAll('#widget-mount')).toHaveLength(1);
+
+    EmbeddableWidget.unmount();
   });
 
   test('#mount twice', async () => {
