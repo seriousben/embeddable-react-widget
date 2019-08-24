@@ -98,7 +98,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
-    "gh-pages": "2.1.0",
+    "gh-pages": "2.1.1",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
     "mini-css-extract-plugin": "0.8.0",
