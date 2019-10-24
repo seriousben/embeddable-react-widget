@@ -102,7 +102,7 @@
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "mini-css-extract-plugin": "0.8.0",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.0",
     "postcss-increase-specificity": "0.6.0",
     "postcss-loader": "3.0.0",
     "sass-loader": "8.0.0",
