@@ -110,7 +110,7 @@
     "webpack": "4.41.4",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.10.1",
-    "webpack-obfuscator": "0.18.7",
+    "webpack-obfuscator": "0.18.8",
     "webpack-serve": "3.2.0"
   },
   "dependencies": {
